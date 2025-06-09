@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Timer and Stopwatch</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #number {
+      font-size: 3rem;
+      margin: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+    select, input {
+      padding: 5px;
+      margin: 5px;
+    }
+    #circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: red;
+      position: absolute;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Choose Mode:</h2>
+  <select id="mode">
+    <option value="stopwatch">Stopwatch</option>
+    <option value="timer">Timer</option>
+    <option value="both">Both</option>
+  </select>
+
+  <div id="pointsLevelContainer">
+    <div id="pointsDisplay">Points: 0</div>
+    <div id="levelDisplay">Level: 1</div>
+  </div>
+
+  <div id="timerDiv" class="hidden">
+    <h3>Set Timer</h3>
+    <input type="number" id="timer" placeholder="Enter time" min="1" />
+    <select id="time">
+      <option value="seconds">Seconds</option>
+      <option value="minutes">Minutes</option>
+      <option value="hours">Hours</option>
+    </select>
+    <button id="startTimerButton">Start Timer</button>
+  </div>
+
+  <h1 id="number">0</h1>
+  <button id="startStopButton">Start</button>
+
+  <div id="gameContainer" class="hidden">
+    <h2>Click the circle as fast as you can!</h2>
+    <div id="circle"></div>
+    <p>Score: <span id="score">0</span></p>
+  </div>
+
+  <script src="timer.js"></script> <!-- Your JS file -->
+</body>
+</html>
+
