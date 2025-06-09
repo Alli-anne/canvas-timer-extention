@@ -140,6 +140,7 @@ function showGame() {
     circle.removeEventListener("click", clickCircle);
     alert("Time's up! Your score: " + score);
     gameContainer.classList.add("hidden");
+    
     timerDiv.classList.remove("hidden");
   }, gameDuration);
 
