@@ -6,6 +6,7 @@ let timeOpen = false;
 let points = 0;
 let level = 1;
 let lastMinute = 0;
+let gameDuration = 10000;
 
 // DOM Elements
 const numberHtml = document.getElementById("number");
